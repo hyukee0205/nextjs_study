@@ -9,3 +9,12 @@
 .nav a {
   padding: 0 8px;
 }
+
+.section1 {
+  border: 1px solid #fe5553;
+  padding: 20px;
+}
+
+.section1 a {
+  margin-right: 10px;
+}
