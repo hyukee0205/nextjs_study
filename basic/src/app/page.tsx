@@ -1,9 +1,6 @@
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import styles from './page.module.css';
 import Counter from '@/components/Counter';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   console.log('안녕! - 서버');
@@ -11,6 +8,10 @@ export default function Home() {
     <>
       <h1>홈페이지다 !</h1>
       <Counter />
+      <Image src='https://i.pinimg.com/564x/13/9b/81/139b81b7e9ecd9d26aadf78346ac8f03.jpg' alt='shop' 
+      width={400}
+      height={400}
+      />
     </>
   )
 }

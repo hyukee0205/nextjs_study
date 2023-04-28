@@ -2,16 +2,19 @@
   {
     "id": "1234",
     "name": "청바지222",
-    "price": 12000
+    "price": 12000,
+    "image": "denim.jpg"
   },
   {
     "id": "1235",
     "name": "티셔츠",
-    "price": 65000
+    "price": 65000,
+    "image": "tshirt.jpg"
   },
   {
     "id": "1236",
     "name": "모자",
-    "price": 55000
+    "price": 55000,
+    "image": "cap.jpg"
   }
 ]
