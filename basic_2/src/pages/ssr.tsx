@@ -1,18 +1,15 @@
 import MeowArticle from '@/components/MeowArticle';
-import { getProducts } from '@/service/products';
-import Image from 'next/image';
+import { getProducts, Product } from '@/service/products';
 import Link from 'next/link';
-import clothesImage from '../../../public/images/clothes.jpg';
 
-// export const revalidate = 3;
+type Props = {
+  products: Product[];
+};
 
-export default async function ProductsPage() {
-  const products = await getProducts();
-
+export default function SSGPage({ products }: Props) {
   return (
     <>
       <h1>제품 소개 페이지!</h1>
-      <Image src={clothesImage} alt='Clothes' priority />
       <ul>
         {products.map(({ id, name }, index) => (
           <li key={index}>
@@ -23,4 +20,11 @@ export default async function ProductsPage() {
       <MeowArticle />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const products = await getProducts();
+  return {
+    props: { products },
+  };
 }
